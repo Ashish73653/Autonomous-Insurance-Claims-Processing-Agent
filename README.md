@@ -28,6 +28,12 @@ Routing Engine (Rule-Based + Confidence Scoring)
 Structured JSON Output (CLI)
 ```
 
+![System Architecture Diagram](diagrams/System%20Architecture%20Diagram.png)
+
+### Processing Flow
+
+![Processing Flow Diagram](diagrams/Processing%20Flow%20Diagram.png)
+
 ## 🔷 Rule Priority & Decision Hierarchy
 
 Routing rules are evaluated in the following order:
@@ -49,6 +55,10 @@ Injury-related claims require specialized handling due to:
 - Regulatory compliance considerations
 
 Even if the estimated damage is below the fast-track threshold, injury claims are routed to a specialist queue. This reflects real-world insurance workflows where risk classification overrides cost thresholds.
+
+### Routing Decision Tree
+
+![Routing Decision Tree Diagram](diagrams/Routing%20Decision%20Tree%20Diagram.png)
 
 ## 🔷 Confidence Scoring Strategy
 
@@ -102,6 +112,10 @@ The system is divided into clear modules:
 - Easier maintenance
 - Testability
 - Extensibility
+
+### Component Interaction
+
+![Component Interaction Diagram](diagrams/Component%20Interaction%20Diagram.png)
 
 ## 🧪 Test Scenarios
 
