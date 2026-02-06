@@ -8,7 +8,7 @@ It extracts structured data from FNOL documents (PDF/TXT), validates required fi
 
 The system emphasizes explainability, modular architecture, and rule-priority logic consistent with real-world insurance risk handling.
 
-## 📌 Overview
+## Overview
 
 This project implements a lightweight autonomous claims processing agent that:
 
@@ -20,7 +20,7 @@ This project implements a lightweight autonomous claims processing agent that:
 
 The system is designed to demonstrate clarity of logic, modular architecture, and explainable decision-making.
 
-## 🏗 System Architecture
+## System Architecture
 
 ```
 FNOL Document (PDF/TXT)
@@ -36,15 +36,15 @@ Routing Engine (Rule-Based + Confidence Scoring)
 Structured JSON Output (CLI)
 ```
 
-### 🏗 System Architecture
+### System Architecture Diagram
 
 ![System Architecture Diagram](diagrams/System-Architecture-Diagram.png)
 
-### 🔄 Processing Flow
+### Processing Flow
 
 ![Processing Flow Diagram](diagrams/Processing-Flow-Diagram.png)
 
-## 🔷 Rule Priority & Decision Hierarchy
+## Rule Priority & Decision Hierarchy
 
 Routing rules are evaluated in the following order:
 
@@ -66,11 +66,11 @@ Injury-related claims require specialized handling due to:
 
 Even if the estimated damage is below the fast-track threshold, injury claims are routed to a specialist queue. This reflects real-world insurance workflows where risk classification overrides cost thresholds.
 
-### 🌳 Routing Decision Tree
+### Routing Decision Tree
 
 ![Routing Decision Tree Diagram](diagrams/Routing-Decision-Tree-Diagram.png)
 
-## 🔷 Confidence Scoring Strategy
+## Confidence Scoring Strategy
 
 Confidence is derived deterministically from rule certainty:
 
@@ -90,7 +90,7 @@ This ensures:
 - Deterministic behavior
 - No black-box decisions
 
-## 🔷 Design Decisions
+## Design Decisions
 
 ### Why Rule-Based Instead of Machine Learning?
 
@@ -123,13 +123,13 @@ The system is divided into clear modules:
 - Testability
 - Extensibility
 
-### 🧩 Component Interaction
+### Component Interaction
 
 ![Component Interaction Diagram](diagrams/Component-Interaction-Diagram.png)
 
-## 🧪 Test Scenarios
+## Test Scenarios
 
-### 1️⃣ Injury Case
+### 1. Injury Case
 
 ```bash
 python app.py sample_docs/FNOL_Injury_Case.pdf
@@ -137,7 +137,7 @@ python app.py sample_docs/FNOL_Injury_Case.pdf
 
 **Expected Route:** Specialist Queue
 
-### 2️⃣ Fraud Case
+### 2. Fraud Case
 
 ```bash
 python app.py sample_docs/FNOL_Fraud_Case.pdf
@@ -145,7 +145,7 @@ python app.py sample_docs/FNOL_Fraud_Case.pdf
 
 **Expected Route:** Investigation Flag
 
-### 3️⃣ Fast-Track Case
+### 3. Fast-Track Case
 
 ```bash
 python app.py sample_docs/FNOL_FastTrack_Case.pdf
@@ -153,9 +153,9 @@ python app.py sample_docs/FNOL_FastTrack_Case.pdf
 
 **Expected Route:** Fast-track
 
-## 🧪 Example Outputs
+## Example Outputs
 
-### 1️⃣ Injury Case — Specialist Queue
+### 1. Injury Case — Specialist Queue
 
 ```bash
 python app.py sample_docs/FNOL_Injury_Case.pdf
@@ -163,7 +163,7 @@ python app.py sample_docs/FNOL_Injury_Case.pdf
 
 ![Injury Case Output](examples/Injury-Case-Output.png)
 
-### 2️⃣ Fraud Case — Investigation Flag
+### 2. Fraud Case — Investigation Flag
 
 ```bash
 python app.py sample_docs/FNOL_Fraud_Case.pdf
@@ -171,7 +171,7 @@ python app.py sample_docs/FNOL_Fraud_Case.pdf
 
 ![Fraud Case Output](examples/Fraud-Case-Output.png)
 
-### 3️⃣ Fast-Track Case — Automated Processing
+### 3. Fast-Track Case — Automated Processing
 
 ```bash
 python app.py sample_docs/FNOL_FastTrack_Case.pdf
@@ -179,7 +179,7 @@ python app.py sample_docs/FNOL_FastTrack_Case.pdf
 
 ![Fast-Track Case Output](examples/FastTrack-Case-Output.png)
 
-### 4️⃣ Incomplete FNOL — Manual Review
+### 4. Incomplete FNOL — Manual Review
 
 ```bash
 python app.py sample_docs/sample1.pdf
@@ -187,7 +187,7 @@ python app.py sample_docs/sample1.pdf
 
 ![Manual Review Case Output](examples/ManualReview-Case-Output.png)
 
-## 🚀 How to Run
+## How to Run
 
 **Create virtual environment:**
 
@@ -214,7 +214,7 @@ python app.py <file_path>
 python app.py sample_docs/FNOL_Fraud_Case.pdf
 ```
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - Replace regex extraction with structured LLM parsing
 - Add ML-based fraud probability scoring
@@ -222,7 +222,7 @@ python app.py sample_docs/FNOL_Fraud_Case.pdf
 - Add REST API layer
 - Add structured logging for audit compliance
 
-## 🧠 System Characteristics
+## System Characteristics
 
 - Deterministic
 - Explainable
