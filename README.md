@@ -28,11 +28,11 @@ Routing Engine (Rule-Based + Confidence Scoring)
 Structured JSON Output (CLI)
 ```
 
-![System Architecture Diagram](diagrams/System%20Architecture%20Diagram.png?v=2)
+![System Architecture Diagram](diagrams/System-Architecture-Diagram.png)
 
 ### Processing Flow
 
-![Processing Flow Diagram](diagrams/Processing%20Flow%20Diagram.png?v=2)
+![Processing Flow Diagram](diagrams/Processing-Flow-Diagram.png)
 
 ## 🔷 Rule Priority & Decision Hierarchy
 
@@ -58,7 +58,7 @@ Even if the estimated damage is below the fast-track threshold, injury claims ar
 
 ### Routing Decision Tree
 
-![Routing Decision Tree Diagram](diagrams/Routing%20Decision%20Tree%20Diagram.png?v=2)
+![Routing Decision Tree Diagram](diagrams/Routing-Decision-Tree-Diagram.png)
 
 ## 🔷 Confidence Scoring Strategy
 
@@ -115,7 +115,7 @@ The system is divided into clear modules:
 
 ### Component Interaction
 
-![Component Interaction Diagram](diagrams/Component%20Interaction%20Diagram.png?v=2)
+![Component Interaction Diagram](diagrams/Component-Interaction-Diagram.png)
 
 ## 🧪 Test Scenarios
 
