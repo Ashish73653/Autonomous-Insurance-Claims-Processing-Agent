@@ -1,5 +1,13 @@
 # Autonomous Insurance Claims Processing Agent (Lite)
 
+## Executive Summary
+
+This project implements a lightweight autonomous insurance claims routing engine.
+
+It extracts structured data from FNOL documents (PDF/TXT), validates required fields, and applies deterministic business rules to route claims into Fast-track, Manual Review, Specialist Queue, or Investigation workflows.
+
+The system emphasizes explainability, modular architecture, and rule-priority logic consistent with real-world insurance risk handling.
+
 ## 📌 Overview
 
 This project implements a lightweight autonomous claims processing agent that:
