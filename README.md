@@ -36,9 +36,11 @@ Routing Engine (Rule-Based + Confidence Scoring)
 Structured JSON Output (CLI)
 ```
 
+### 🏗 System Architecture
+
 ![System Architecture Diagram](diagrams/System-Architecture-Diagram.png)
 
-### Processing Flow
+### 🔄 Processing Flow
 
 ![Processing Flow Diagram](diagrams/Processing-Flow-Diagram.png)
 
@@ -64,7 +66,7 @@ Injury-related claims require specialized handling due to:
 
 Even if the estimated damage is below the fast-track threshold, injury claims are routed to a specialist queue. This reflects real-world insurance workflows where risk classification overrides cost thresholds.
 
-### Routing Decision Tree
+### 🌳 Routing Decision Tree
 
 ![Routing Decision Tree Diagram](diagrams/Routing-Decision-Tree-Diagram.png)
 
@@ -121,7 +123,7 @@ The system is divided into clear modules:
 - Testability
 - Extensibility
 
-### Component Interaction
+### 🧩 Component Interaction
 
 ![Component Interaction Diagram](diagrams/Component-Interaction-Diagram.png)
 
@@ -150,6 +152,40 @@ python app.py sample_docs/FNOL_FastTrack_Case.pdf
 ```
 
 **Expected Route:** Fast-track
+
+## 🧪 Example Outputs
+
+### 1️⃣ Injury Case — Specialist Queue
+
+```bash
+python app.py sample_docs/FNOL_Injury_Case.pdf
+```
+
+![Injury Case Output](examples/Injury-Case-Output.png)
+
+### 2️⃣ Fraud Case — Investigation Flag
+
+```bash
+python app.py sample_docs/FNOL_Fraud_Case.pdf
+```
+
+![Fraud Case Output](examples/Fraud-Case-Output.png)
+
+### 3️⃣ Fast-Track Case — Automated Processing
+
+```bash
+python app.py sample_docs/FNOL_FastTrack_Case.pdf
+```
+
+![Fast-Track Case Output](examples/FastTrack-Case-Output.png)
+
+### 4️⃣ Incomplete FNOL — Manual Review
+
+```bash
+python app.py sample_docs/sample1.pdf
+```
+
+![Manual Review Case Output](examples/ManualReview-Case-Output.png)
 
 ## 🚀 How to Run
 
@@ -194,3 +230,9 @@ python app.py sample_docs/FNOL_Fraud_Case.pdf
 - CLI-driven
 - JSON-based
 - Easily extensible
+
+## Engineering Reflection
+
+This solution intentionally uses deterministic rule-based logic rather than machine learning to maximize transparency and auditability.
+
+In production environments, this routing layer could be augmented with probabilistic fraud scoring models or LLM-based semantic extraction. However, for the scope of this assessment, clarity and explainability were prioritized over complexity.
