@@ -20,6 +20,10 @@ This project implements a lightweight autonomous claims processing agent that:
 
 The system is designed to demonstrate clarity of logic, modular architecture, and explainable decision-making.
 
+## Demo Video
+
+Watch the system in action: [View Demo Video](https://drive.google.com/file/d/1T5qzDUNHRRqmqt6wLwbB4WC4RwxQrVld/view?usp=drive_link)
+
 ## System Architecture
 
 ```
