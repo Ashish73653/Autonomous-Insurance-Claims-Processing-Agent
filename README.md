@@ -230,9 +230,3 @@ python app.py sample_docs/FNOL_Fraud_Case.pdf
 - CLI-driven
 - JSON-based
 - Easily extensible
-
-## Engineering Reflection
-
-This solution intentionally uses deterministic rule-based logic rather than machine learning to maximize transparency and auditability.
-
-In production environments, this routing layer could be augmented with probabilistic fraud scoring models or LLM-based semantic extraction. However, for the scope of this assessment, clarity and explainability were prioritized over complexity.
